@@ -7,6 +7,7 @@
         <el-header>
             <common-header-vue></common-header-vue>
         </el-header>
+       <common-tag></common-tag>
         <el-main>
             <router-view></router-view>
         </el-main>
@@ -16,12 +17,16 @@
 <script>
 import CommonAsideVue from '../components/CommonAside.vue'
 import CommonHeaderVue from '../components/CommonHeader.vue'
+import CommonTag from '@/components/CommonTag.vue'
+//import CommonTag from '../components/CommonTag.vue'
 export default {
     name: 'Home',
     components:{
-        CommonAsideVue,
-        CommonHeaderVue
-    },
+    CommonAsideVue,
+    CommonHeaderVue,
+    CommonTag,
+        CommonTag
+},
     data() {
         return {
             
