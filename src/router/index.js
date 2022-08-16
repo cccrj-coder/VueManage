@@ -8,42 +8,51 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        //name: 'Main',
+        name: 'Main',
         component: () => import('../views/Main.vue'),
         
         children: [
-            {
-                path: '/',
-                redirect: '/home'
-            },
-            {
-                path: '/home',
-                name: 'home',
-                component: () => import('../views/Home')
-            },
-            {
-                path: '/user',
-                name: 'user',
-                component: () => import('../views/User')
-            },
-            {
-                path: '/mall',
-                name: 'mall',
-                component: () => import('../views/Mall')
-            },
-            {
-                path: '/page1',
-                name: 'page1',
-                component: () => import('../views/Other/pageOne')
-            },
-            {
-                path: '/page2',
-                name: 'page2',
-                component: () => import('../views/Other/pageTwo')
-            },
+            // {
+            //     path: '/',
+            //     redirect: '/home'
+            // },
+            // {
+            //     path: '/home',
+            //     name: 'home',
+            //     component: () => import('../views/Home')
+            // },
+            // {
+            //     path: '/user',
+            //     name: 'user',
+            //     component: () => import('../views/User')
+            // },
+            // {
+            //     path: '/mall',
+            //     name: 'mall',
+            //     component: () => import('../views/Mall')
+            // },
+            // {
+            //     path: '/page1',
+            //     name: 'page1',
+            //     component: () => import('../views/Other/pageOne.vue')
+            // },
+            // {
+            //     path: '/page2',
+            //     name: 'page2',
+            //     component: () => import('../views/Other/pageTwo.vue')
+            // },
         ]
     },
-    {path: '/', redirect: () => import('../views/Home') }
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('../views/Login/login.vue')
+    },
+    // {
+    //     path: '/',
+    //     redirect: '/home',
+    //     component: () => import('../views/Login/login.vue')
+    // }
 ]
 
 //解决重复点击一个路由控制台报错
